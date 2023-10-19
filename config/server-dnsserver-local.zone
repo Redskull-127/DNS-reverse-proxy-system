@@ -1,0 +1,20 @@
+$TTL 2d
+
+$ORIGIN server.dnsserver.local.
+
+@           IN      SOA     ns.server.dnsserver.local. meer.dnsserver.local. (
+                            2023101900  ; serial
+                            12h         ; refresh
+                            15m         ; retry
+                            3w          ; expire
+                            2h          ; minimum ttl
+                            )
+            
+            IN      NS      ns.server.dnsserver.local.
+
+ns          IN      A       172.21.224.1
+
+; -- add dns records below
+
+srv-prod-1      IN      A       172.21.224.1
+*.srv-prod-1    IN      A       172.21.224.1
